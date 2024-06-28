@@ -8,7 +8,7 @@ const InteractionNewSchema = require('../schemas/interactionNewSchema');
 const { BadRequestError } = require('../expressError');
 const {ensureLoggedIn, ensureSeller, ensureOwnerOfCart, ensureCorrectSellerOrAdmin, ensureSellerOrAdmin, ensureCorrectUserOrAdmin, ensureOwnerOfCartOrAdmin} = require('../middleware/auth');
 const db = require('../db');
-const stripe = require("stripe")("sk_test_51PLY26KdeqAv3N7XdWwkEqaV9bt85QVwj52cCJP62qflrnKwIEbFULlapZlIp13OLNPuN0ZrPAI6rXjYkI4zDeaz001jAwf7TG");
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 const router = express.Router();
 
@@ -74,8 +74,8 @@ router.post('/create-checkout-session', ensureLoggedIn, async function(req, res,
         payment_method_types:["card"],
         line_items: lineItems,
         mode: "payment",
-        success_url:"https://ecommercely-frontend.onrender.com/success",
-        cancel_url:"https://ecommercely-frontend.onrender.com/cancel"
+        success_url:"http://ecommercely-frontend.onrender.com/success",
+        cancel_url:"http://ecommercely-frontend.onrender.com/cancel"
     })
 
     return res.status(201).json({id:session.id})
