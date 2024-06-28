@@ -13,10 +13,10 @@ Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
 
 Runs all tests(models, routes, and helper tests)
 
-## Important Note
+## Important Notes
 
 * Payments are verified through stripe api
-
+* Database is populated with fake user and product data from mockaroo.com
 
 ### DATABASE SCHEMA
 
