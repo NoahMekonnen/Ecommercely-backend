@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "customerId",
+        "productId",
+        "quantitySold"
+    ],
+    "properties": {
+        "customerId": {
+            "type": "number",
+            "default": 0,
+            "title": "The customerId Schema",
+            "examples": [
+                7
+            ]
+        },
+        "productId": {
+            "type": "number",
+            "default": 0,
+            "title": "The productId Schema",
+            "examples": [
+                5
+            ]
+        },
+        "quantitySold": {
+            "type": "number",
+            "default": 0,
+            "title": "The quantitySold Schema",
+            "examples": [
+                3
+            ]
+        }
+    },
+    "examples": [{
+        "customerId":4,
+        "productId":4,
+        "quantitySold":4
+    }]
+}

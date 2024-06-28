@@ -1,0 +1,96 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "name",
+        "description",
+        "price",
+        "imageUrl",
+        "quantity",
+        "sellerId",
+        "expectedShippingTime"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name Schema",
+            "examples": [
+                "a"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description Schema",
+            "examples": [
+                "a"
+            ]
+        },
+        "price": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The price Schema",
+            "examples": [
+                3.50
+            ]
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": "",
+            "title": "The imageUrl Schema",
+            "examples": [
+                "img.png"
+            ],  
+            "media": {
+                "binaryEncoding": "base64",
+                "type": "image/png"
+            }
+        },
+        "quantity": {
+            "type": "integer",
+            "default": 0,
+            "title": "The quantity Schema",
+            "examples": [
+                4
+            ]
+        },
+        "category": {
+            "type": "string",
+            "default": "",
+            "title": "The category Schema",
+            "examples": [
+                "books"
+            ]
+        },
+        "sellerId": {
+            "type": "integer",
+            "default": 0,
+            "title": "The sellerId Schema",
+            "examples": [
+                4
+            ]
+        },
+        "expectedShippingTime": {
+            "type": "integer",
+            "default": 4,
+            "title": "The expectedShippingTime Schema",
+            "examples": [
+                4
+            ]
+        }
+    },
+    "examples": [{
+        "name": "a",
+        "description": "a",
+        "price": 3.50,
+        "imageUrl": "img.png",
+        "quantity": 4,
+        "category": "books",
+        "sellerId": 1201,
+        "expectedShippingTime": 10
+    }]
+}

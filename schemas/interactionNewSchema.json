@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "cartId",
+        "productId",
+        "quantityChosen"
+    ],
+    "properties": {
+        "cartId": {
+            "type": "number",
+            "default": 0,
+            "title": "The cartId Schema",
+            "examples": [
+                7
+            ]
+        },
+        "productId": {
+            "type": "number",
+            "default": 0,
+            "title": "The productId Schema",
+            "examples": [
+                5
+            ]
+        },
+        "quantityChosen": {
+            "type": "number",
+            "default": 0,
+            "title": "The quantityChosen Schema",
+            "examples": [
+                3
+            ]
+        }
+    },
+    "examples": [{
+        "cartId":4,
+        "productId":4,
+        "quantityChosen":4
+    }]
+}
