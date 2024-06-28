@@ -74,7 +74,7 @@ router.post('/create-checkout-session', ensureLoggedIn, async function(req, res,
         payment_method_types:["card"],
         line_items: lineItems,
         mode: "payment",
-        success_url:"https://ecommercely-frontend.onrender.com/success",
+        success_url:"https://ecommercely-frontend.onrender.com/succes",
         cancel_url:"https://ecommercely-frontend.onrender.com/cancel"
     })
 
