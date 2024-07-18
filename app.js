@@ -12,7 +12,7 @@ const cartRoutes = require('./routes/carts');
 const userRoutes = require('./routes/users');
 const interactionRoutes = require('./routes/interactions');
 
-app.use(cors({origin: 'https://ecommercely-frontend.onrender.com', credentials: true}));
+app.use(cors({origin: ['https://ecommercely-frontend.onrender.com', 'http://localhost:3000'], credentials: true}));
 app.options('*', cors())
 app.use(express.json());
 app.use(authenticateJWT);
