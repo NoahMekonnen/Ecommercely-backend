@@ -17,12 +17,12 @@ app.options('*', cors())
 app.use(express.json());
 app.use(authenticateJWT);
 
-
 app.use("/auth", authRoutes);
 app.use("/products", productRoutes);
 app.use("/carts", cartRoutes);
 app.use("/users", userRoutes);
 app.use("/interactions", interactionRoutes);
+
 
 /** This will match all other routes */
 app.use(function(req, res, next){
@@ -32,7 +32,6 @@ app.use(function(req, res, next){
 /** Generic Error Handler */
 app.use(function(err, req, res, next){
     if(process.env.NODE_ENV !== "test") console.log(err.stack);
-    
     const status = err.status || 500;
     const msg = err.message;
     

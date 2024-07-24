@@ -5,8 +5,8 @@ const PORT = process.env.PORT || 3001;
 
 function getDatabaseUri(){
     return (process.env.NODE_ENV === 'test')
-    ? "postgresql://noah:Godalone1.@localhost:5432/ecommerce_store_test"
-    : process.env.DATABASE_URL || "postgresql://noah:Godalone1.@localhost:5432/ecommerce_store";
+    ? "postgresql://noah:Godalone1.@localhost/ecommerce_store_test"
+    : "postgresql://gevcekpk:j-J1-GlHhXOL0PziDRw8cxLVarYeKCFu@bubble.db.elephantsql.com/gevcekpk";
 };
 
 const BCRYPT_WORK_FACTOR = process.env.NODE_ENV === 'test' ? 1 : 12
